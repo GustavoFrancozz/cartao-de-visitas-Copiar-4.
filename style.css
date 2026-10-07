@@ -1,0 +1,509 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 15% 20%, #7c3aed, transparent 30%),
+        radial-gradient(circle at 85% 80%, #06b6d4, transparent 30%),
+        linear-gradient(135deg, #111827, #312e81, #0f172a);
+
+    transition: 0.5s;
+}
+
+/* =========================
+   BOLINHAS
+========================= */
+
+.bolinha {
+    position: fixed;
+
+    border-radius: 50%;
+
+    opacity: 0.45;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.bolinha1 {
+    width: 25px;
+    height: 25px;
+
+    background: #a78bfa;
+
+    left: 5%;
+    top: 15%;
+
+    animation: movimento1 8s infinite alternate ease-in-out;
+}
+
+.bolinha2 {
+    width: 18px;
+    height: 18px;
+
+    background: #22d3ee;
+
+    right: 10%;
+    top: 20%;
+
+    animation: movimento2 7s infinite alternate ease-in-out;
+}
+
+.bolinha3 {
+    width: 35px;
+    height: 35px;
+
+    background: #c084fc;
+
+    left: 20%;
+    bottom: 10%;
+
+    animation: movimento3 10s infinite alternate ease-in-out;
+}
+
+.bolinha4 {
+    width: 15px;
+    height: 15px;
+
+    background: #67e8f9;
+
+    right: 25%;
+    bottom: 15%;
+
+    animation: movimento4 6s infinite alternate ease-in-out;
+}
+
+.bolinha5 {
+    width: 28px;
+    height: 28px;
+
+    background: #818cf8;
+
+    left: 45%;
+    top: 5%;
+
+    animation: movimento5 9s infinite alternate ease-in-out;
+}
+
+.bolinha6 {
+    width: 12px;
+    height: 12px;
+
+    background: #f0abfc;
+
+    right: 5%;
+    bottom: 30%;
+
+    animation: movimento6 8s infinite alternate ease-in-out;
+}
+
+@keyframes movimento1 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(250px, 180px);
+    }
+}
+
+@keyframes movimento2 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-220px, 250px);
+    }
+}
+
+@keyframes movimento3 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(300px, -220px);
+    }
+}
+
+@keyframes movimento4 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-250px, -150px);
+    }
+}
+
+@keyframes movimento5 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(180px, 300px);
+    }
+}
+
+@keyframes movimento6 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-300px, -200px);
+    }
+}
+
+/* =========================
+   CARTÃO
+========================= */
+
+.cartao {
+    position: relative;
+
+    z-index: 2;
+
+    width: 350px;
+
+    padding: 28px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.4s;
+}
+
+/* =========================
+   FOTO
+========================= */
+
+.topo {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.avatar {
+    width: 75px;
+    height: 75px;
+
+    margin-bottom: 12px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #06b6d4
+    );
+
+    box-shadow:
+        0 8px 22px rgba(124, 58, 237, 0.45);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    background: #eeeeee;
+
+    color: #555;
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+/* =========================
+   PERFIL
+========================= */
+
+.perfil {
+    margin-top: 18px;
+}
+
+.etiqueta {
+    margin-bottom: 6px;
+
+    color: #7c3aed;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+h1 {
+    margin-bottom: 5px;
+
+    font-size: 27px;
+}
+
+.cargo {
+    margin-bottom: 10px;
+
+    color: #555;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.descricao {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+/* =========================
+   LINHA
+========================= */
+
+.linha {
+    height: 1px;
+
+    margin: 20px 0;
+
+    background: #ddd;
+}
+
+/* =========================
+   CONTATOS
+========================= */
+
+.contato {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.botao-contato {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 11px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #4c1d95,
+        #0891b2
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.botao-contato:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(76, 29, 149, 0.35);
+}
+
+.icone {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    font-size: 16px;
+}
+
+.texto {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.texto small {
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    opacity: 0.7;
+}
+
+.botao-contato strong {
+    font-size: 18px;
+}
+
+/* =========================
+   BOTÃO TEMA
+========================= */
+
+#botaoTema {
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #333;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#botaoTema:hover {
+    background: #eeeeee;
+
+    transform: translateY(-2px);
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    margin-top: 18px;
+
+    color: #999;
+
+    font-size: 10px;
+}
+
+/* =========================
+   MODO ESCURO
+========================= */
+
+body.escuro {
+    background:
+        radial-gradient(circle at 15% 20%, #581c87, transparent 30%),
+        radial-gradient(circle at 85% 80%, #164e63, transparent 30%),
+        linear-gradient(135deg, #020617, #111827, #020617);
+}
+
+body.escuro .cartao {
+    background: rgba(20, 20, 30, 0.95);
+
+    border-color: rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.7);
+}
+
+body.escuro .status {
+    background: #292929;
+
+    color: #aaa;
+}
+
+body.escuro .etiqueta {
+    color: #a78bfa;
+}
+
+body.escuro .cargo {
+    color: #bbb;
+}
+
+body.escuro .descricao {
+    color: #aaa;
+}
+
+body.escuro .linha {
+    background: #333;
+}
+
+body.escuro #botaoTema {
+    color: white;
+
+    border-color: #444;
+}
+
+body.escuro #botaoTema:hover {
+    background: #292929;
+}
+
+body.escuro footer {
+    color: #777;
+}
